@@ -11,6 +11,7 @@ void raw_mode();
 void normal_mode();
 void highlight();
 void white();
+void findfile();
 
 int main(){
 	raw_mode();
@@ -37,21 +38,41 @@ void raw_mode(){
 	return;
 }
 
-// void highlight(char str){
-// 	char *head[]={"#include","return","do","switch","case","break","default","while","if","else"};
-// 	int i=0;
-// 	while(head[i]){
-// 		if(strcmp(head[i],str)==0){
-// 			printf("\033[0;35m");
-// 		}
-// 	}
-
-// }
 
 
-// void white(char str){
-// 	printf("\033[0;37m]");
-// }
+void findfile(){
+	int num =0;
+	char findword[200];
+    char string[50];
+    char ffile[100] = {0};
+        while(ffile[0]!= '0'){	
+			FILE *finding;
+			printf("enter the file name");
+			scanf("%s",findword);
+			finding = fopen(findword, "r");
+            if (finding == NULL){
+                    printf("Error file missing\n");
+                    return;
+                }
+			
+            printf("please enter a word(enter 0 to end)\n");
+            scanf("%s", ffile);
+			printf("words found similar\n");
+            while ( fscanf(finding,"%s", string) == 1){
+                if(strstr(string, ffile)!=0) {
+                    printf("%s\n",string);
+					num++;
+                }
+            }
+            printf("The word %s is in the file %s %d times\n",ffile,findword,num );
+            num = 0;
+            fclose(finding);
+        }
+        return;
+
+
+}
+
 
 void mainmenu(){
 	int choice;
@@ -61,6 +82,7 @@ void mainmenu(){
 	printf("0 quit\n");
 	printf("1 create file\n");
 	printf("2 open file\n");
+	printf("3 find no of occurence of word\n");
 	printf("====================================\n");
 	printf("enter your choice\n");
 	scanf("%d",&choice);
@@ -71,6 +93,9 @@ void mainmenu(){
 		break;
 	case 2:
 		openFile();
+		break;
+	case 3:
+		findfile();
 		break;
 	default:
 		printf("you have exited the editor\n");
