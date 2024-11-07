@@ -39,6 +39,51 @@ void raw_mode(){
 }
 
 
+void highlight() {
+    char compare[50];
+    char *head[] = {"#include", "return", "do", "switch", "case", "break", "default", "while", "if", "else"};
+	char *blue[]={"int", "char", "float", "void","struct"};
+    int i = 0;
+    char filename[100];
+    FILE *pointer;
+
+    printf("Enter the file name: ");
+    scanf("%s", filename);
+
+    pointer = fopen(filename, "r");
+    if (pointer == NULL) {
+        printf("File not found\n");
+        return;
+    }
+
+    while (fscanf(pointer, "%49s", compare) == 1) {
+        int Key = 0;
+    
+        for (i = 0; i < 10; i++) {
+            if (strcmp(compare, head[i]) == 0) {
+                Key = 1;
+                break;
+			}
+			if (strcmp(compare,blue[i])==0){
+				Key =2;
+				break;
+            }
+        }
+
+        if (Key==1) {
+            printf("\033[0;35m%s\n", compare); 
+		}
+		else if (Key==2){
+			printf("\033[0;34m%s\n",compare);
+        } 
+		else {
+            printf("\033[0;37m%s\n", compare); 
+        }
+    }
+
+    fclose(pointer);
+}
+
 
 void findfile(){
 	int num =0;
@@ -74,6 +119,7 @@ void findfile(){
 }
 
 
+
 void mainmenu(){
 	int choice;
 	do{
@@ -83,6 +129,7 @@ void mainmenu(){
 	printf("1 create file\n");
 	printf("2 open file\n");
 	printf("3 find no of occurence of word\n");
+	printf("4 highlighten text\n");
 	printf("====================================\n");
 	printf("enter your choice\n");
 	scanf("%d",&choice);
@@ -96,6 +143,9 @@ void mainmenu(){
 		break;
 	case 3:
 		findfile();
+		break;
+	case 4:
+		highlight();
 		break;
 	default:
 		printf("you have exited the editor\n");
