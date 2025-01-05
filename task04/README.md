@@ -12,7 +12,7 @@ This platform is intended for film enthusiasts and like-minded people.
 It provides an online platform where users can interact with like-minded people to discover, rate, and review films.
 
  ### Product Scope
-        The Letterboxd website provides the following functions: 
+The Letterboxd website provides the following functions: 
 
 Create and manage an account using the sign-in and sign-out function.
 Search movies by title, genre, date, etc.
