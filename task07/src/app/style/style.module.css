@@ -1,0 +1,62 @@
+.body{
+    background-color: black;
+    color: azure;
+    margin-left:50px;
+    margin-right:50px;
+}
+.h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: oblique;
+}
+.input{
+    font-family: cursive;
+}
+.button{
+    background-color:black;
+    color:white;
+    border:solid black;
+    font-size:medium;
+    font-family: cursive;
+}
+.button:hover{
+    background-color: grey;
+}
+.headerbutton{
+    background-color:black;                
+    font-size:20px;
+    font-family:cursive;
+    color:white;
+    width:100%;
+    row-gap:10px;
+    border:grey;
+
+}
+.headerbutton:hover{
+    border-bottom:3px solid blue;
+    background-color: lavender;
+    color: black;
+    border-radius: 1rem;
+}
+.img:hover{
+    border-style: ridge;
+    border:2px solid silver;
+    transition: ease-in-out;
+    transition-duration: 5s;
+}
+
+.profile{
+    border-radius: 15em;
+    border-color: silver;
+}
+
+.changebutton{
+    background-color:black;                
+    font-size:20px;
+    font-family:cursive;
+    color:gray;
+    border:1px solid silver;
+}
+.changebutton:hover{
+    background-color: silver;
+    color:black;
+}

@@ -1,0 +1,98 @@
+[
+    {
+        "id":1,
+        "name":"Nosferatu",
+        "img":"/image/pic 1.jpg",
+        "year":2024,
+        "author":"author1",
+        "description":"This is the description of movie 1",
+        "review":{
+            "1":"review1",
+            "2":"review2"
+        }
+    },
+    {
+        "id":2,
+        "name":"Wicked",
+        "img":"/image/pic 2.jpg",
+        "year":2024,
+        "author":"author2",
+        "description":"This is the description of movie 2",
+        "review":{
+            "1":"review1",
+            "2":"review2"
+        }
+    },
+    {
+        "id":3,
+        "name":"Carry-On",
+        "img":"/image/pic 3.jpg",
+        "year":2024,
+        "author":"author1",
+        "description":"This is the description of movie 3",
+        "review":{
+            "1":"review1",
+            "2":"review2"
+        }
+    },
+    {
+        "id":4,
+        "name":"Juror #2",
+        "img":"/image/pic 4.jpg",
+        "year":2024,
+        "author":"author1",
+        "description":"This is the description of movie 4",
+        "review":{
+            "1":"review1",
+            "2":"review2"
+        }
+    },
+    {
+        "id":5,
+        "name":"Gladiator II",
+        "img":"/image/pic 5.jpg",
+        "year":2024,
+        "author":"author1",
+        "description":"This is the description of movie 5",
+        "review":{
+            "1":"review1",
+            "2":"review2"
+        }
+    },
+    {
+        "id":6,
+        "name":"Interstellar",
+        "img":"/image/pic 6.jpg",
+        "year":2014,
+        "author":"author1",
+        "description":"This is the description of movie 6",
+        "review":{
+            "1":"review1",
+            "2":"review2"
+        }
+    },
+    {
+        "id":7,
+        "name":"The wild Robot",
+        "img":"/image/pic 7.jpg",
+        "year":2024,
+        "author":"author1",
+        "description":"This is the description of movie 7",
+        "review":{
+            "1":"review1",
+            "2":"review2"
+        }
+    },
+    {
+        "id":8,
+        "name":"Moana 2",
+        "img":"/image/pic 8.jpg",
+        "year":2001,
+        "author":"author1",
+        "description":"This is the description of movie 8",
+        "review":{
+            "1":"review1",
+            "2":"review2"
+        }
+    }
+]
