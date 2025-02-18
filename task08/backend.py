@@ -132,11 +132,11 @@ def add_movie():
     movie_description = movie_d.get("movie_description")
     movie_author = movie_d.get("movie_author")
 
-    Movie_exist=MovieData.query.filter_by(movie_name=movie_name, movie_author=movie_author,Year=year).first()
+    Movie_exist=MovieData.query.filter_by(Movie_name=movie_name, Movie_author=movie_author,Year=year).first()
     if Movie_exist:
         return(jsonify({"message":"Movie already added"}))
     else:
-        Movie=MovieData(movie_name=movie_name,movie_img=movie_img,Year=year,movie_description=movie_description,movie_author=movie_author)
+        Movie=MovieData(Movie_name=movie_name,Movie_img=movie_img,Year=year,Movie_description=movie_description,Movie_author=movie_author)
         db.session.add(Movie)
         db.session.commit()
         return(jsonify({"message":"Movie added successfully"}))
